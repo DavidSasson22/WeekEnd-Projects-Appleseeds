@@ -13,13 +13,6 @@
   'box11 box12 box12 box13 box10 box10 box10 box14'
 }
 
-/* .box{
-  padding: 3rem;
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 10px;
-} */
 
 #box1 {
   grid-area: box1;
