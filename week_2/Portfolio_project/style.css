@@ -19,16 +19,19 @@
   box-sizing: border-box;
 }
 
+html { scroll-behavior: smooth; }
+
 body{
   background-color: #faedcb;
 }
 
 ul{
-  padding: 0;
+  padding: 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  height: 7rem;
 }
 
 ul li {
@@ -36,29 +39,29 @@ ul li {
   margin: 0 0.625rem;
 }
 
-/* ----------First Page---------- */
+/* ---------------------------------------First Page-------------------------------------------- */
 
 #home {
   height: 100vh;
   display: grid;
-  /* gap: 1rem; */
   grid-template-rows: auto;
 }
 
-#home .navbar{
-  grid-row: 1/2;
+ .navbar{
+  grid-row: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0 0.5rem;
 }
 
-#home .navbar #logo {
+ .navbar #logo {
   height: 7rem;
   width: 8rem;
   background: url(/logos-red/logo_transparent.png)no-repeat center/cover;
 }
 
-#home .navbar ul li a{
+ .navbar ul li a{
   position: relative;
   display: block;
   padding: 0.625rem 0.938rem;
@@ -69,6 +72,10 @@ ul li {
   font-size: 1.125rem;
 }
 
+.navbar ul li .current {
+  color: #1C5FAD;
+  font-weight: 700;
+}
 
 /* -----Navbar animation----- */
 
@@ -82,7 +89,7 @@ ul li {
   background-color: #AD382D;
   z-index: -1;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: 0.5s;
 }
 
@@ -94,7 +101,7 @@ ul li {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 0.125rem;
   background-color: #AD382D;
@@ -112,10 +119,14 @@ ul li {
   text-shadow: 0.031rem 0.031rem #FA5041;
 }
 
+.navbar ul li .current:hover{
+  text-shadow: 0.031rem 0.031rem #288AFA;
+}
+
 /* .......................... */
 
-#home #main {
-  grid-row: 2/10;
+.main {
+  grid-row: 2/20;
   background-color: #D3F0E9;
   position: relative;
   display: flex;
@@ -123,13 +134,14 @@ ul li {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  z-index: 10;
+  z-index: 8;
   overflow: hidden;
   font-size: 7.5rem;
   text-align: center;
 }
 
-#home #main #content h1{
+
+#home .main #content h1{
   font-size: 3.75rem;
   line-height: 7.5rem;
   font-weight: 400;
@@ -137,7 +149,7 @@ ul li {
   font: 'Gotham Medium';
   color: #75968F;  
 }
-#home #main #content h3{
+#home .main #content h3{
   font-size: 2.5rem;
   line-height: 4rem;
   font-weight: 400;
@@ -146,9 +158,9 @@ ul li {
   color: #967579;  
 }
 
-/* ...Main-Animation... */
+/* ......Main-Animation...... */
 
-#main #content::before{
+.main #content::before{
   content: 'David Yosef Sasson';
   text-align: center center;
   color: transparent;
@@ -165,15 +177,111 @@ ul li {
   color: #75968F;
 }
 
-#main #content:hover::before{
+.main #content:hover::before{
   transform: scale(0);
   color: #75968F;
 }
 
+/* -------------Footer----------------- */
 
-
-#home .footer {
+.footer {
   background-color: #c6def1;
-  grid-row: 10/13;
+  grid-row: 20;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
+
+#home .footer .symbol_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 5rem;
+  padding: 0px 1.25rem;
+  background-color: white;
+  border-radius: 35px ;
+  }
+
+#home .footer .symbol_box img {
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+#home .footer .symbol_box :hover{
+  animation: shake 1s;  
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes shake2 {
+  0% { transform: rotate(-45deg) translate(3px, -3px)} 
+  10% { transform: rotate(-45deg) translate(2px, -2px)}
+  20% { transform: rotate(-45deg) translate(1px, -1px)}
+  30% { transform: rotate(-45deg) translate(0px, 0px)}
+  40% { transform: rotate(-45deg) translate(-1px, -1px)}
+  50% { transform: rotate(-45deg) translate(-2px, 2px) }
+  60% { transform: rotate(-45deg) translate(-3px, 3px)}
+  70% { transform: rotate(-45deg) translate(-2px, 2px) }
+  80% { transform: rotate(-45deg) translate(-1px, 1px)}
+  90% { transform: rotate(-45deg) translate(0px, 0px)}
+  100% { transform: rotate(-45deg) translate(0px, 0px)}
+}
+
+
+/* ----------------------Nav Key--------------------- */
+
+  .main #content a span {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    box-sizing: border-box;
+  }
+
+  .main #content a span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+    animation: shake2 1s infinite;
+  }
+  
+
+
 /* ------------------------------------------------------ */
+/* ------------------------------------------------------ */
+/* -----------------------ABOUT-------------------------- */
+
+#about{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+
+
