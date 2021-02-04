@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-body {
+body{
   background-color: #faedcb;
 }
 
@@ -70,7 +70,7 @@ ul li {
 }
 
 
-/* Navbar animation */
+/* -----Navbar animation----- */
 
 .navbar ul li a::before{
   content: '';
@@ -116,12 +116,17 @@ ul li {
 
 #home #main {
   grid-row: 2/10;
-  background-color: #c9e4de;
+  background-color: #D3F0E9;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  z-index: 10;
+  overflow: hidden;
+  font-size: 7.5rem;
+  text-align: center;
 }
 
 #home #main #content h1{
@@ -140,6 +145,32 @@ ul li {
   font: 'Gotham Medium';
   color: #967579;  
 }
+
+/* ...Main-Animation... */
+
+#main #content::before{
+  content: 'David Yosef Sasson';
+  text-align: center center;
+  color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #c9e4de;
+  border-radius: 100%;
+  z-index: -1;
+  transform: scale(5);
+  transition: transform 1s ease-in-out;
+  color: #75968F;
+}
+
+#main #content:hover::before{
+  transform: scale(0);
+  color: #75968F;
+}
+
+
 
 #home .footer {
   background-color: #c6def1;
