@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('/font/Gotham\ Medium\ Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('/font/Gotham\ Book\ Regular.otf');
+}
+@font-face{
+  font-family: 'Gotham Light';
+  src: url('/font/GothamLightRegular.otf');
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #faedcb;
+}
+
+ul{
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 0.625rem;
+}
+
+/* ----------First Page---------- */
+
+#home {
+  height: 100vh;
+  display: grid;
+  /* gap: 1rem; */
+  grid-template-rows: auto;
+}
+
+#home .navbar{
+  grid-row: 1/2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#home .navbar #logo {
+  height: 7rem;
+  width: 8rem;
+  background: url(/logos-red/logo_transparent.png)no-repeat center/cover;
+}
+
+#home .navbar ul li a{
+  position: relative;
+  display: block;
+  padding: 0.625rem 0.938rem;
+  text-decoration: none;
+  text-align: center;
+  color: #AD382D;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+
+/* Navbar animation */
+
+.navbar ul li a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #AD382D;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+}
+
+.navbar ul li a:hover::before{
+  transform: scaleX(1);
+}
+
+.navbar ul li a::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #AD382D;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: 0.5s;
+}
+
+.navbar ul li a:hover::after{
+  transform: scaleX(1);
+}
+
+.navbar ul li a:hover{
+  text-shadow: 0.031rem 0.031rem #FA5041;
+}
+
+/* .......................... */
+
+#home #main {
+  grid-row: 2/10;
+  background-color: #c9e4de;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#home #main #content h1{
+  font-size: 3.75rem;
+  line-height: 7.5rem;
+  font-weight: 400;
+  font-family: 'Gotham Medium';
+  font: 'Gotham Medium';
+  color: #75968F;  
+}
+#home #main #content h3{
+  font-size: 2.5rem;
+  line-height: 4rem;
+  font-weight: 400;
+  font-family: 'Gotham Medium';
+  font: 'Gotham Medium';
+  color: #967579;  
+}
+
+#home .footer {
+  background-color: #c6def1;
+  grid-row: 10/13;
+}
+/* ------------------------------------------------------ */
