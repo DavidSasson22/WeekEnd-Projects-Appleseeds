@@ -170,7 +170,7 @@ section {
   border-radius: 100%;
   z-index: -1;
   transform: scale(5);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   color: #75968F;
 }
 
@@ -224,16 +224,8 @@ section {
 }
 
 @keyframes shake2 {
-  0% { transform: rotate(-45deg) translate(3px, -3px)} 
-  10% { transform: rotate(-45deg) translate(2px, -2px)}
-  20% { transform: rotate(-45deg) translate(1px, -1px)}
-  30% { transform: rotate(-45deg) translate(0px, 0px)}
-  40% { transform: rotate(-45deg) translate(-1px, -1px)}
-  50% { transform: rotate(-45deg) translate(-2px, 2px) }
-  60% { transform: rotate(-45deg) translate(-3px, 3px)}
-  70% { transform: rotate(-45deg) translate(-2px, 2px) }
-  80% { transform: rotate(-45deg) translate(-1px, 1px)}
-  90% { transform: rotate(-45deg) translate(0px, 0px)}
+  0% { transform: rotate(-45deg) translate(0px, 0px)} 
+  50% { transform: rotate(-45deg) translate(3px, -3px) }
   100% { transform: rotate(-45deg) translate(0px, 0px)}
 }
 
@@ -264,7 +256,7 @@ section {
     border-bottom: 2px solid #fff;
     transform: rotate(-45deg);
     box-sizing: border-box;
-    animation: shake2 1s infinite;
+    animation: shake2 1.5s infinite;
   }
   
 
@@ -400,7 +392,82 @@ button:focus { outline: none; }
     content: '';
     color: #75968F;
   }
+
+  h1{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 200;
+  }
+
+  h3{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 200;
+  }
+
+  .navbar ul{
+    height: 2rem;
+    margin: 0 0 2rem 0;
+  }
+
+  .navbar ul li{
+    margin: 0rem 0.25rem ;
+  }
+
+  .navbar ul li a{
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1rem;
+    padding: 0 0;
+  }
+
+  .navbar #logo{
+    height: 5rem;
+    width: 5rem;
+    padding: 0.2rem 0.2rem;
+  }
+
+  section{
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .navbar, .main, .footer{
+    width: 100vw;
+    flex-wrap: wrap;
+  }
+
+  .navbar{
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .main{
+    height: 60vh;
+  }
+  .footer{
+    height: 20vh;
+  }
+
+  #home .footer .symbol_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    padding: 0px 1.25rem;
+    background-color: white;
+    border-radius: 35px ;
+    }
   
+  #home .footer .symbol_box img {
+    width: 3rem;
+    height: 3rem;
+    align-self: center;
+  }
+
+   
   .main #content:hover::before{
     transform: scale(0);
     color: #75968F;
@@ -408,13 +475,102 @@ button:focus { outline: none; }
   #about .navbar, #projects .navbar{
     display: none;
   }
-  section{
-    min-height: 245vh;
+ 
+  /* -----------about---------- */
+
+  #about{
+    width: 100vw;
   }
+    
+  .main #content a span::after{
+    display: none;
+  }
+  .main #content a span{
+    display: none;
+  }
+
+  #about .main{
+    display: grid;
+    height: 100vh;
+    gap: rem;
+    grid-template-columns: 90%;
+    grid-template-rows: 1.4fr 1.4fr 1fr;
+    padding: 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main #right{
+    width: 50%;
+    justify-self: center;
+  }
+
+  #about .footer{
+    display: none;
+  }
+  
+  #projects{
+    display: none;
+  }
+}
+
+/* ----------------------------------------------------- */
+/* -----------Ipad-------------------------------------- */
+
+@media(min-width: 551px) and (max-width:800px) {
   .navbar{
     justify-content: center;
     align-items: center;
-  }  
+    width: 100vw;
+  }
+
+  .footer{
+    width: 100vw;
+    flex-wrap: wrap;
+  }
+  
+  section{
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #about .footer{
+    display: none;
+  }
+
+  #about .navbar{
+    width: 100%;
+  }
+
+  #about .main{
+    display: grid;
+    width: auto;
+    height: 90vh;
+    gap: rem;
+    grid-template-columns: auto;
+    grid-template-rows: 1.4fr 1.4fr 1fr;
+    padding: 1rem 1rem;
+  }
+
+  .main #right{
+    width: 30%;
+    justify-self: center;
+  }
+
+  .box{
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 75vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about .footer{
+    display: none;
+  }
+  
+  #projects{
+    display: none;
+  }
 }
-
-
