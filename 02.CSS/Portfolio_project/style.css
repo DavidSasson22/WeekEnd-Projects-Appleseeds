@@ -158,7 +158,6 @@ section {
 h4{
   font-size: 1rem;
   font-family: 'Gotham Book';
-  color: #42748A;  
 }
 
 /* ......Main-Animation...... */
@@ -410,6 +409,10 @@ button:focus { outline: none; }
 }
 
 
+@keyframes show-yourself{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
 
 
 .boxx{
@@ -421,77 +424,150 @@ button:focus { outline: none; }
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #42748A;
+}
+
+.hidden{
+  display: none;
+  z-index: -100;
+  background-color: #C49ED9;
+  margin: 1rem 0 1rem 0;
+  font-size: 1rem;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  padding: 1rem;
+  align-items: center;
+  text-align: left;
+  color: #F9F2FD;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.2rem;
+  animation: show-yourself 1s;
 }
 
 #box1 {
   grid-area: box1;
-  background: url(/img/2.jpg) no-repeat center center/cover;  
+  background: url(/img/2.jpg) no-repeat center center/cover;
+  opacity: 0.75;
 }
 
 #box2 {
   grid-area: box2;
 }
+  
+
+#box2:hover #box2h  {
+  z-index: 100;
+  display: flex;
+}
+
 
 #box3 {
   grid-area: box3;
   background: url(/img/7.jpg) no-repeat center center/cover;
+  opacity: 0.75;
 }
 
 #box4 {
   grid-area: box4;
 }
 
+#box4:hover #box4h  {
+  z-index: 100;
+  display: flex;
+}
+
 #box5 {
   grid-area: box5;
+}
+
+#box5:hover #box5h  {
+  z-index: 100;
+  display: flex;
 }
 
 #box6 {
   grid-area: box6;
 }
 
+#box6:hover #box6h  {
+  z-index: 100;
+  display: flex;
+}
+
 #box7 {
   grid-area: box7;
-  background: url(/img/1.jpg) no-repeat center center/cover;  
+  background: url(/img/1.jpg) no-repeat center center/cover;
+  opacity: 0.75;  
 }
 
 #box8 {
   grid-area: box8;
-  background: url(/img/2.jpg) no-repeat center center/cover;  
+  background: url(/img/8.jpg) no-repeat center center/cover;
+  opacity: 0.75;  
 }
 
 #box9 {
   grid-area: box9;
-  background: url(/img/3.jpg) no-repeat center center/cover;  
+  background: url(/img/3.jpg) no-repeat center center/cover;
+  opacity: 0.75;  
 }
 
 #box10 {
   grid-area: box10;
 }
 
+#box10:hover #box10h  {
+  z-index: 100;
+  display: flex;
+}
+
 #box11 {
   grid-area: box11;
-  background: url(/img/4.jpg) no-repeat center center/cover;  
+  background: url(/img/4.jpg) no-repeat center center/cover;
+  opacity: 0.75;  
 }
 
 #box12 {
   grid-area: box12;
 }
 
+#box12:hover #box12h  {
+  z-index: 100;
+  display: flex;
+}
+
 #box13 {
   grid-area: box13;
-  background: url(/img/5.jpg) no-repeat center center/cover;  
+  background: url(/img/5.jpg) no-repeat center center/cover;
+  opacity: 0.75;  
 }
 
 #box14 {
   grid-area: box14;
-  background: url(/img/6.jpg) no-repeat center center/cover;  
+  background: url(/img/6.jpg) no-repeat center center/cover;
+  opacity: 0.75;  
 }
 
 #projects .footer {
   position: relative;
 }
 
+
+
+/* ---------------Buttons--------- */
+
+
+
+
+
+
+/* ////////////////////////////// */
 /* -----------Media--------------*/
+/* ///////////////////////////// */
 
 @media(max-width: 550px) {
   .main #content::before{
@@ -615,8 +691,26 @@ button:focus { outline: none; }
     display: none;
   }
   
-  #projects{
+  /* #projects{
     display: none;
+  } */
+
+  #projects .main{
+    height: 100vh;
+    grid-template-areas:
+  'box1 box1 box5 box5 box5 box11 box11'
+  'box1 box1 box5 box5 box5 box12 box12'
+  'box2 box2 box2 box8 box8 box12 box12'
+  'box2 box2 box2 box8 box8 box13 box13'
+  'box2 box2 box2 box9 box10 box10 box10'
+  'box3 box3 box6 box6 box10 box10 box10'
+  'box4 box4 box6 box6 box10 box10 box10'
+  'box4 box4 box7 box7 box7 box14 box14'
+  }
+
+  #projects .main .hidden{
+    height: 90%;
+    top: 5%
   }
 }
 
@@ -676,7 +770,19 @@ button:focus { outline: none; }
     display: none;
   }
   
-  #projects{
+  /* #projects{
     display: none;
+  } */
+  #projects .main{
+    height: 80vh;
+    grid-template-areas:
+  'box1 box1 box5 box5 box5 box11 box11'
+  'box1 box1 box5 box5 box5 box12 box12'
+  'box2 box2 box2 box8 box8 box12 box12'
+  'box2 box2 box2 box8 box8 box13 box13'
+  'box2 box2 box2 box9 box10 box10 box10'
+  'box3 box3 box6 box6 box10 box10 box10'
+  'box4 box4 box6 box6 box10 box10 box10'
+  'box4 box4 box7 box7 box7 box14 box14'
   }
 }
