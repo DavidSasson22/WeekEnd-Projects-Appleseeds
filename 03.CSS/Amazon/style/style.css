@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#navbar {
+  width: 100vw;
+  margin: 0!important;
+  background-color: #232f3e;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 auto;  
+}
+
+#topNavBar {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #131921;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 3.75rem;
+  width: 100%;
+  min-width: 1000px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1em;
+  zoom: 1;
+  z-index: 10;
+}
+
+#middleNavbar{
+  width: 100%;
+  height: 2.438rem;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #232f3e;
+}
+
+#bottomNavBar {
+  width: 100%;
+  height: 2.063rem;
+  background-color: #fafafa;
+  padding: 0 0.563rem 0 0.938rem;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid rgba(0,0,0,.17);
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+#topNavBar {
+  display: flex;
+}
+
+#topNavBar #navLeft {
+  display: flex;
+  margin-left: 11px;
+  margin: 6px 0 2px 11px;
+  width: auto;
+  height: 3.05rem;
+  background-color: red;
+}
+
+#topNavBar #navLeft .logo{
+  margin: 1px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 0px 8px 2px 6px;
+  background-color: seagreen;
+}
+
+
+#topNavBar #navLeft .logo img{
+  width: 5.875rem;
+  height: 1.775rem;
+  margin-top: 0.625rem;
+  background-color: purple;
+}
+
+#topNavBar #navLeft .logo:hover {
+  border: 1px white solid;
+  border-radius: 2px;
+  margin: 1px 0px;
+}
+
+/* #topNavBar #navLeft .delivery {
+  background: coral;
+  padding: 0 9px 0 9px;
+  margin: 5px 2px 5px 0;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: fit-content;
+  height: auto;
+  box-shadow: none;
+  scroll-margin: 0;
+  overflow: hidden;
+  line-height: 39px;
+  color: #d6d6d6;
+  font-size: 14px;
+} */
