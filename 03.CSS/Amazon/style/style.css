@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 #navbar {
   width: 100vw;
   margin: 0!important;
@@ -37,13 +41,7 @@
   display: flex;
 }
 
-#middleNavbar{
-  width: 100%;
-  height: 2.438rem;
-  display: flex;
-  flex-flow: row nowrap;
-  background-color: #232f3e;
-}
+
 
 #bottomNavBar {
   width: 100%;
@@ -114,7 +112,6 @@
 
 #topNavBar #navLeft .delivery a {
   display: flex;
-  text-decoration: none;
   color: white
 }
 
@@ -250,4 +247,118 @@
 }
 
 /* ------------------MiddleBar------------------- */
+
+#middleNavbar{
+  display: flex;
+  padding: 0 11px;
+  width: 100%;
+  height: 2.438rem;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #232f3e;
+  color: #F0F1F2;
+  font-family: "AmazonEmberRegular";
+  font-size: 14px;
+  line-height: 12px;
+  font-weight: 400;
+}
+
+#middleNavbar #navLeft {
+  font-weight: 700;
+}
+
+#middleNavbar #navLeft img {
+  margin-right: 4px;
+}
  
+#middleNavbar .middleBox {
+  margin: 5px 0px 6px;
+  padding: 8px 9px;
+  border: 1px transparent solid;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+#middleNavbar .middleBox:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+#middleNavbar #navCenter {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+#middleNavbar #navRight {
+  align-self: center;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+#bottomNavBar{
+  display: flex;
+}
+
+#bottomNavBar .middleBox{
+  position: relative;
+  float: left;
+  border: 2px transparent solid;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  font-family: "AmazonEmberRegular";
+  font-size: 12px;
+  line-height: 33px;
+  color: #8d8d8d;
+  height: 31px;
+  padding: 0 11px;
+}
+
+#bottomNavBar .middleBox:hover{
+  color: #e47911;
+  border-bottom: 2px solid #f90;
+  font-weight: 700;
+}
+
+#break{
+  padding: 0 16px!important;
+  margin-top: 8px!important;
+  font-family: "AmazonEmberRegular";
+  font-size: 12px;
+  color: #8d8d8d;
+}
+
+
+
+/* ------------Main------------------ */
+
+main {
+  /* display: flex; */
+  /* padding: 14px 18px 18px 0; */
+  /* font-family: "AmazonEmberRegular",Arial,sans-serif; */
+  /* width: auto; */
+  /* height: 80vh; */
+  background-color: antiquewhite;
+}
+
+
+
+/* .contRight {
+  height: 60vh;
+  width: 55.2%;
+  background-color: lightslategray;  
+} */
+
+.imageGal {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .galimg {
+  width: 40px;
+  height: 40px;
+  border: 2px black solid;
+  margin-bottom: 22px;
+} */
