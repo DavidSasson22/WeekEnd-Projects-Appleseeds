@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "AmazonEmberRegular";
+  src: url(/fonts/Amazon\ Ember\ Regular.ttf);
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -59,19 +65,20 @@
   margin: 6px 0 2px 11px;
   width: auto;
   height: 3.05rem;
-  background-color: red;
+  /* background-color: red; */
 }
 
 #topNavBar #navLeft .logo{
   margin: 1px;
   height: 100%;
-  width: 100%;
+  width: 7rem;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   padding: 0px 8px 2px 6px;
-  background-color: seagreen;
+  /* background-color: seagreen; */
+  border: 1px solid transparent;
 }
 
 
@@ -79,28 +86,61 @@
   width: 5.875rem;
   height: 1.775rem;
   margin-top: 0.625rem;
-  background-color: purple;
+  /* background-color: purple; */
 }
 
 #topNavBar #navLeft .logo:hover {
   border: 1px white solid;
   border-radius: 2px;
-  margin: 1px 0px;
 }
 
-/* #topNavBar #navLeft .delivery {
-  background: coral;
-  padding: 0 9px 0 9px;
-  margin: 5px 2px 5px 0;
+#topNavBar #navLeft .delivery {
   display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  width: fit-content;
-  height: auto;
-  box-shadow: none;
-  scroll-margin: 0;
-  overflow: hidden;
-  line-height: 39px;
-  color: #d6d6d6;
+  height: 100%;
+  margin: 1px;
+  color: white;
+  /* background: coral; */
+  margin: 2px 2px;
+  padding: 12px 8px ;
+  font-family: "AmazonEmberRegular";
+  border: 1px transparent solid;
+  border-radius: 2px;
+}
+
+#topNavBar #navLeft .delivery:hover {
+  border-color: white;
+}
+
+#topNavBar #navLeft .delivery a {
+  display: flex;
+  text-decoration: none;
+  color: white
+}
+
+#topNavBar #navLeft .delivery a #navSymbol{
+  height: 120%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* background-color: turquoise; */
+  margin-right: 4px;
+}
+
+#topNavBar #navLeft .delivery a #navCont {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #cccccc;
+}
+
+#topNavBar #navLeft .delivery a #navCont strong {
+  color: #FCFCFC;
+  font-Weight: 700;
+  line-height: 15px;
   font-size: 14px;
-} */
+}
+
+#topNavBar #navLeft .delivery a img {
+  width: 15px;
+  height: 16px;
+  }
