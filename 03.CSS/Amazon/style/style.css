@@ -27,13 +27,14 @@
   display: flex;
   flex-flow: row nowrap;
   height: 3.75rem;
-  width: 100%;
+  max-width: 100vw;
   min-width: 1000px;
   font-family: inherit;
   font-size: 0.875rem;
   line-height: 1em;
   zoom: 1;
   z-index: 10;
+  display: flex;
 }
 
 #middleNavbar{
@@ -55,9 +56,6 @@
   border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
-#topNavBar {
-  display: flex;
-}
 
 #topNavBar #navLeft {
   display: flex;
@@ -95,12 +93,16 @@
 
 #topNavBar #navLeft .delivery {
   display: flex;
+  flex-direction: column;
   height: 100%;
+  width: 100px;
   margin: 1px;
   color: white;
   /* background: coral; */
-  margin: 2px 2px;
-  padding: 12px 8px ;
+  margin: 2px 6px 2px 2px; 
+  padding: 0 9px;
+  align-items: center;
+  justify-content: center;
   font-family: "AmazonEmberRegular";
   border: 1px transparent solid;
   border-radius: 2px;
@@ -120,9 +122,8 @@
   height: 120%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  /* background-color: turquoise; */
   margin-right: 4px;
+  margin-top: 10px;
 }
 
 #topNavBar #navLeft .delivery a #navCont {
@@ -145,7 +146,7 @@
   }
 
   #topNavBar #navCenter{
-    margin: 4px 6px 4px 0;
+    margin: 2px 6px 6px 0;
     padding: 10px 4px 10px 3px;
     display: flex;
   }
@@ -179,12 +180,74 @@
     line-height: 35px;
     background-color: rgba(255, 255, 255, 0.938);
     border: 0px;
-    border-radius: 0 4px 4px 0px;  
-    padding: 20px 20px;  
+    padding: 20px 20px; 
   }
 
   #topNavBar #navCenter input:focus {
     outline: none;
   }
 
+  #topNavBar #navCenter #searchBox {
+    height: 40px;
+    width: 44px;
+    color: white;
+    background-color: #FFBF6C;
+    border-radius: 0 4px 4px 0px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #topNavBar #navCenter #searchBox:hover{
+    background-color: #F3A847;
+    cursor: pointer;
+  }
+
+  #topNavBar #navRight {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* background-color: rosybrown; */
+    margin: 2px 6px 6px 0;
+    justify-content: space-between;
+    padding: 10px 4px 4px 4px;
+    display: flex;
+    color: white;
+    font-family: "AmazonEmberRegular";
+  }
+
+  #topNavBar #navRight #language {
+    display: flex;
+    margin-right: 1px;
+    margin-left: 1px;
+    padding-top: 10px;
+  }
+
+  .navR{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #cccccc;
+  padding: 0 9px;
+  border: 1px transparent solid;
+  border-radius: 2px;    
+  }
+
+  .navR strong {
+  color: #FCFCFC;
+  font-Weight: 700;
+  line-height: 15px;
+  font-size: 14px;
+  }
+
+.navR:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+/* ------------------MiddleBar------------------- */
  
