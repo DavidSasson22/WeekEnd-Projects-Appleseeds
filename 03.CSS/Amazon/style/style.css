@@ -14,6 +14,14 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-style: normal;
+  font-Weight: 400;
+  font-size:24px;
+  line-height: 32px;
+  Color:#0f1111;
+}
+
 #navbar {
   width: 100vw;
   margin: 0!important;
@@ -60,7 +68,6 @@ a {
   margin: 6px 0 2px 11px;
   width: auto;
   height: 3.05rem;
-  /* background-color: red; */
 }
 
 #topNavBar #navLeft .logo{
@@ -72,7 +79,6 @@ a {
   align-content: center;
   justify-content: center;
   padding: 0px 8px 2px 6px;
-  /* background-color: seagreen; */
   border: 1px solid transparent;
 }
 
@@ -81,7 +87,6 @@ a {
   width: 5.875rem;
   height: 1.775rem;
   margin-top: 0.625rem;
-  /* background-color: purple; */
 }
 
 #topNavBar #navLeft .logo:hover {
@@ -96,7 +101,6 @@ a {
   width: 100px;
   margin: 1px;
   color: white;
-  /* background: coral; */
   margin: 2px 6px 2px 2px; 
   padding: 0 9px;
   align-items: center;
@@ -154,7 +158,6 @@ a {
     font-family: inherit;
     color: #0f1111;
     outline: 0;
-    /* margin: 4px 0 4px 0; */
     padding: 0;
     cursor: pointer;
     border: 0;
@@ -204,7 +207,6 @@ a {
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* background-color: rosybrown; */
     margin: 2px 6px 6px 0;
     justify-content: space-between;
     padding: 10px 4px 4px 4px;
@@ -335,30 +337,157 @@ a {
 /* ------------Main------------------ */
 
 main {
-  /* display: flex; */
-  /* padding: 14px 18px 18px 0; */
-  /* font-family: "AmazonEmberRegular",Arial,sans-serif; */
-  /* width: auto; */
-  /* height: 80vh; */
-  background-color: antiquewhite;
+  display: flex;
+  padding: 14px 18px 18px;
+  font-family: "AmazonEmberRegular",Arial,sans-serif;
+  width: auto;
+  /* background-color: antiquewhite; */
 }
 
+.picLeft {
+  display: flex;
+  flex-direction: column;
+  width: 44.8%;
+  height: 420px;
+  /* background-color: lightpink; */
+  position: sticky;
+  top: 5px;
+}
 
-
-/* .contRight {
-  height: 60vh;
-  width: 55.2%;
-  background-color: lightslategray;  
-} */
 
 .imageGal {
   display: flex;
   flex-direction: column;
+  margin-top: 8px;
+  
 }
 
-/* .galimg {
-  width: 40px;
-  height: 40px;
-  border: 2px black solid;
-  margin-bottom: 22px;
-} */
+.galimg {
+  width: 42px;
+  height: 42px;
+  border: 1px #8d8d8d solid;
+  margin-bottom: 8px;
+  padding: 1px 1px;
+}
+
+.galimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.galimg:hover {
+  cursor: pointer;
+  border-color: #e47911;
+  box-shadow: 0px 0px 4px 2px #f90;
+}
+
+.imgBig {
+  display: none;
+  position: absolute;
+  left: 60px;
+  top: 10px;
+  white-space: nowrap;
+  max-width: 90%;
+  height: 95%;
+}
+
+#image1 {
+  display: block;
+}
+
+.imgBig img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#img2:hover ~ #image1, #img3:hover ~ #image1, #img4:hover ~ #image1, #img5:hover ~ #image1, #img6:hover ~ #image1 {
+  display: none;
+}
+ 
+#img2:hover ~ #image2 {
+  display: block;
+}
+#img3:hover ~ #image3 {
+  display: block;
+}
+#img4:hover ~ #image4 {
+  display: block;
+}
+#img5:hover ~ #image5 {
+  display: block;
+}
+#img6:hover ~ #image6 {
+  display: block;
+}
+
+#rollOver {
+  align-self: center;
+  font-size: 14px;
+  Line-Height:20px;
+  margin-top: 100px;
+  Color: #565959;
+}
+
+.contRight {
+  width: 55.2%;
+  padding-left: 14px;
+  padding-top: 1px;
+  /* background-color: lightslategray;  */
+  display: grid;
+  grid-template-columns: 60% 38%;
+  grid-template-rows: repeat(42, 20px);
+  gap: 8px;
+}
+
+.contRight #headline {
+  grid-column:1;
+  grid-row: 1/6;
+  background-color: lightsalmon;
+}
+
+.contRight #aviable {
+  grid-column: 1;
+  grid-row: 6/15;
+  background-color: lightyellow;
+}
+.contRight #aboutT {
+  grid-column: 1;
+  grid-row: 15/24;
+  background-color: lightsalmon;
+}
+.contRight #similarI {
+  grid-column: 1;
+  grid-row: 24/33;
+  background-color: lightyellow;
+}
+.contRight #thisP {
+  grid-column: 1;
+  grid-row: 33/42;
+  background-color: lightsalmon;
+}
+
+.contRight #box1 {
+  grid-column: 2;
+  grid-row: 1/10;
+  background-color:moccasin;
+}
+
+.contRight #box2 {
+  grid-column: 2;
+  grid-row: 13;
+  background-color: navajowhite;
+}
+
+.contRight #box3 {
+  grid-column: 2;
+  grid-row: 14/19;
+  background-color:moccasin;
+}
+
+.contRight #box4 {
+  grid-column: 2;
+  grid-row: 19/22;
+  background-color: navajowhite;
+}
