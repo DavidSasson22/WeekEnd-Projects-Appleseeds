@@ -22,6 +22,48 @@ h1 {
   Color:#0f1111;
 }
 
+h2 {
+  font-size: 18px;
+  line-height: 24px;
+  Color:#007600;
+  font-Weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #0f1111;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700; 
+  color: #0f1111 
+}
+
+td, th {
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0f1111;
+}
+
+td {
+  font-weight: 400;
+}
+
+th {
+  font-weight: 700;
+}
+
+table {
+  width: 60%;
+  height: 60%;
+  margin-top: 8px;
+}
+
 #navbar {
   width: 100vw;
   margin: 0!important;
@@ -443,20 +485,80 @@ main {
 
 .contRight #headline {
   grid-column:1;
-  grid-row: 1/6;
-  background-color: lightsalmon;
+  grid-row: 1/5;
+  border-bottom: 1px solid #E7E7E7;
+  /* background-color: lightsalmon; */
+}
+
+.contRight #headline a {
+  color: #297D9F;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.contRight #headline a:hover {
+  color: #c7511f;
+  text-decoration: underline #c7511f;
+}
+
+.contRight #headline img {
+  width: 360px;
+  margin-left: -6px;
 }
 
 .contRight #aviable {
   grid-column: 1;
-  grid-row: 6/15;
-  background-color: lightyellow;
+  grid-row: 5/11;
+  /* background-color: lightyellow; */
+  padding-top: 4px;
+  border-bottom: 1px solid #E7E7E7;
 }
+
+.contRight #aviable a {
+  color: #297D9F;
+  border-bottom: 1px solid transparent;
+}
+
+.contRight #aviable a:hover {
+  color: #c7511f;
+  text-decoration: underline #c7511f ;
+}
+
 .contRight #aboutT {
   grid-column: 1;
-  grid-row: 15/24;
-  background-color: lightsalmon;
+  grid-row: 11/17;
+  border-bottom: 1px solid #E7E7E7;
+  padding-top: 4px;
+  /* background-color: lightsalmon; */
 }
+
+.contRight #aboutT ul {
+  margin-top: 2px;
+  margin-left: 16px;
+}
+
+.contRight #aboutT ul li {
+  font-size: 14px;
+  line-height: 20px;
+  color: #0f1111;
+}
+
+.contRight #aboutT a {
+  color: #297D9F;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.contRight #aboutT a span {
+  color: #c7511f;
+}
+
+.contRight #aboutT a:hover {
+  color: #c7511f;
+  text-decoration: underline #c7511f ;  
+}
+
 .contRight #similarI {
   grid-column: 1;
   grid-row: 24/33;
