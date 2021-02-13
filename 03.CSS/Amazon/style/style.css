@@ -43,6 +43,20 @@ h4 {
   color: #0f1111 
 }
 
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700; 
+  color: #0f1111 
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400; 
+  color: #0f1111   
+}
+
 td, th {
   text-align: left;
   font-size: 14px;
@@ -383,7 +397,6 @@ main {
   padding: 14px 18px 18px;
   font-family: "AmazonEmberRegular",Arial,sans-serif;
   width: auto;
-  /* background-color: antiquewhite; */
 }
 
 .picLeft {
@@ -391,7 +404,6 @@ main {
   flex-direction: column;
   width: 44.8%;
   height: 420px;
-  /* background-color: lightpink; */
   position: sticky;
   top: 5px;
 }
@@ -476,7 +488,6 @@ main {
   width: 55.2%;
   padding-left: 14px;
   padding-top: 1px;
-  /* background-color: lightslategray;  */
   display: grid;
   grid-template-columns: 54% 42%;
   grid-template-rows: repeat(42, 20px);
@@ -487,7 +498,6 @@ main {
   grid-column:1;
   grid-row: 1/5;
   border-bottom: 1px solid #E7E7E7;
-  /* background-color: lightsalmon; */
 }
 
 .contRight #headline a {
@@ -510,7 +520,6 @@ main {
 .contRight #aviable {
   grid-column: 1;
   grid-row: 5/11;
-  /* background-color: lightyellow; */
   padding-top: 4px;
   border-bottom: 1px solid #E7E7E7;
 }
@@ -530,7 +539,6 @@ main {
   grid-row: 11/17;
   border-bottom: 1px solid #E7E7E7;
   padding-top: 4px;
-  /* background-color: lightsalmon; */
 }
 
 .contRight #aboutT ul {
@@ -633,7 +641,6 @@ button:hover{
 .contRight #box2 {
   grid-column: 2;
   grid-row: 9;
-  /* background-color: navajowhite; */
   font-size: 13px;
   line-height: 19px;
   display: flex;
@@ -662,12 +669,51 @@ button:hover{
 
 .contRight #box3 {
   grid-column: 2;
-  grid-row: 14/19;
-  background-color:moccasin;
+  grid-row: 10/15;
+  /* background-color:moccasin; */
+  border: 1px solid #E7E7E7;
+  border-radius: 6px;
+  padding: 6px 10px 6px 17px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contRight #box3 h6 span {
+  color:#007600;
+  font-weight: 700;
+}
+
+#shorBut {
+  width: 100px;
+}
+
+
+#box3 div {
+  position: relative;
+  padding-top: 10px;
+}
+
+#box3 div img {
+  position: absolute;
+  top: 8px;
+  transform: rotate(340deg);
+  margin-left: 24px;
+  width: 120px;
+  height: 60px;
 }
 
 .contRight #box4 {
   grid-column: 2;
-  grid-row: 19/22;
-  background-color: navajowhite;
+  grid-row: 15/18;
+  font-Size:12px;
+  Line-Height: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contRight #box4 #medBut {
+  width: 114px;
 }
