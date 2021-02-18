@@ -7,7 +7,9 @@ const toWeirdCase = (string) => {
     for (let i = 0; i < word.length; i++) {
       result += i % 2 === 0 ? word[i].toUpperCase() : word[i].toLowerCase();
     };
-    result += " ";
+    result +=
+    
+    " ";
   };
   return result
 }
