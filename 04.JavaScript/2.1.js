@@ -3,9 +3,9 @@ const numbers2 = [1, 2, 5, 8];
 
 
 const SumLowest = (array) => {
-  result = 0;
-  for (i = 0; i < 2; i++) {
-    for (j = 0; j < array.length - 1; j++) {
+  let result = 0;
+  for (let i = 0; i < 2; i++) {
+    for (let j = 0; j < array.length - 1; j++) {
       if (array[j] > 0 && array[j] < array[j + 1]) {
         [array[j + 1], array[j]] = [array[j], array[j + 1]];
       };
