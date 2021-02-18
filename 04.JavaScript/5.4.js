@@ -11,6 +11,5 @@ const toWeirdCase = (string) => {
   };
   return result
 }
-console.log(toWeirdCase("David Yosef Sasson"));
+console.log(toWeirdCase("Weird string case"));
 console.timeEnd('Execution Time');
-
