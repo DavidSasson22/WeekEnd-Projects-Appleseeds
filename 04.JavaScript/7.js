@@ -22,8 +22,9 @@ const filter0 = (array, condition) => {
 
 const forEach0 = (array, someFunction) => {
   for (let i = 0; i < array.length; i++) {
-    someFunction(array[i], i, array);
+    array[i] = someFunction(array[i])
   }
+  return array
 }
 
 
@@ -33,6 +34,15 @@ const forEach0 = (array, someFunction) => {
 const map0 = (array, someFunction) => {
   let copy = [];
   for (let i = 0; i < array.length; i++) {
-    copy.push(someFunction(i), i, array);
+    let value = someFunction(array[i]);
+    copy.push([value, i]);
   }
+  return copy
 } 
+
+
+const plus3 = (x) => x+3; 
+
+console.log(map0(test1, plus3));  
+console.log(forEach0(test1, plus3));  
+console.log(test1);
