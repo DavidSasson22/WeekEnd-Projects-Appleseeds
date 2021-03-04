@@ -21,21 +21,18 @@ const skyMaker = () => {
       sky.classList.add(`segmant`);
       sky.setAttribute(`row`, i);
       sky.setAttribute(`column`, j);
-      sky.animate([
-        { opacity: '0' },
-        { opacity: '1' }
-      ], {
-        duration: 1000,
-      });
       playArea.appendChild(sky);
     }
   }
 }
 
 
+
+
 //Fill bottom with land
 
 const groundMaker = () => {
+  let dur = 1000;
   let topGround = document.querySelectorAll(`[row = '${groundSt}']`);
   for (seg of topGround) {
     seg.classList.remove(`sky`);
@@ -111,6 +108,8 @@ const sunMaker = () => {
 
 const blockMaker = () => {
   let blocks = [];
+  let dur = 40;
+
 
   //first chunk
   for (let i = groundSt - 4; i < groundSt; i++) {
@@ -129,9 +128,11 @@ const blockMaker = () => {
     }
     l += 1;
   }
-  blocks.forEach(block => {
-    block.classList.remove(`sky`);
-    block.classList.add(`block`);
+  blocks.forEach(function (block, index) {
+    setTimeout(function () {
+      block.classList.remove(`sky`);
+      block.classList.add(`block`);
+    }, dur * index);
   })
 }
 
@@ -140,21 +141,25 @@ const blockMaker = () => {
 
 //for the trees-truck
 const treeMaker = () => {
+  let durk = 100;
   let trucks = [];
   for (let i = groundSt - 4; i < groundSt; i++) {
     let temp = document.querySelector(`[row = "${i}"][column = "${14}"]`);
     let temp2 = document.querySelector(`[row = "${i}"][column = "${44}"]`);
     trucks.push(temp, temp2);
   }
-  trucks.forEach(truck => {
-    truck.classList.remove(`sky`);
-    truck.classList.add(`treeT`);
-  });
 
+  trucks.forEach(function (truck, index) {
+    setTimeout(function () {
+      truck.classList.remove(`sky`);
+      truck.classList.add(`treeT`);
+    }, durk * index);
+  })
 
 
   //For the leaves
   let leaves = [];
+  let dur = 1000;
   for (let i = groundSt - 7; i < groundSt - 4; i++) {
     for (let j = 12; j < 16; j++) {
       let temp = document.querySelector(`[row = "${i}"][column = "${j}"]`);
@@ -167,6 +172,22 @@ const treeMaker = () => {
     leaves.forEach(leave => {
       leave.classList.remove(`sky`);
       leave.classList.add(`treeL`);
+      leave.animate([
+        { opacity: `0` },
+        { opacity: `1` },
+        { opacity: `1` },
+        { opacity: `1` },
+        { opacity: `1` },
+        { opacity: `1` },
+        { opacity: `1` },
+        { opacity: `1` },
+        { opacity: `1` },
+        { opacity: `1` },
+        { opacity: `1` }
+      ], {
+        duration: dur,
+      });
+      dur += 150;
     })
   }
 }
@@ -181,7 +202,7 @@ const play1 = () => {
 }
 
 skyMaker();
-play1 ();
+play1();
 
 
 startGame.addEventListener("click", () => {
