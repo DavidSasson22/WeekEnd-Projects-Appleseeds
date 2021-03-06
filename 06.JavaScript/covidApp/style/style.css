@@ -1,0 +1,97 @@
+ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  margin-left: 4px;
+}
+
+.search {
+  display: inline-block;
+  width: 30vw;
+  font-size: 18px;
+  color: #6B605F;
+  font-weight: 700;
+}
+
+.byCountry {
+  display: inline-block;
+}
+
+.data {
+  float: right;
+  width: 66vw;
+}
+
+.tableData {
+  border: 1px solid black;
+  display: flex;
+  width: 50vw;
+  float: right;
+}
+
+th {
+  padding: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* .graph {
+  height: 10vh;
+} */
+
+.container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+#countryLi {
+  width: 200px;
+}
+
+.dark {
+  background-color: #A1EBC3;
+}
+
+.light {
+  background-color:#87A4D4;
+}
+
+.dataType {
+  background-color: #EB948A;
+  padding: 16px;
+}
+
+
+.spinner-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  padding: 2vh 1vw;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.spinner {
+  border-radius: 20px;
+  animation: virus 3s ease-in-out infinite alternate;
+  height: 80%;
+}
+
+.allBut {
+  background-color: aqua;
+  display: inline-block;
+}
+
+@keyframes virus {
+  0% {
+    transform: translateX(-10vw) rotate(0);
+  }
+  100% {
+    transform: translateX(90vw) rotate(180deg);
+  }
+}
