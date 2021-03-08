@@ -22,18 +22,21 @@ li {
 .data {
   float: right;
   width: 66vw;
+  height: 60px;
 }
 
 .tableData {
-  border: 1px solid black;
+  border: 2px solid #6B605F;
   display: flex;
   width: 50vw;
   float: right;
+  background-color: white;
 }
 
 th {
   padding: 16px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 60px;
 }
 
 .graph {
