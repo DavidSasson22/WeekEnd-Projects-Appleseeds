@@ -36,9 +36,21 @@ th {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* .graph {
-  height: 10vh;
-} */
+.graph {
+  height: 55vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+canvas {
+  width: 0px;
+}
+
+#divcanvas {
+  width: 1000px;
+  height: 100px;
+}
 
 .container {
   display: flex;
@@ -61,6 +73,7 @@ th {
 .dataType {
   background-color: #EB948A;
   padding: 16px;
+  height: 38vh;
 }
 
 
